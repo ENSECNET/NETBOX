@@ -6,7 +6,7 @@
 
 Interactive install wizard · appliance-style status console · one-command bootstrap
 
-[![Docs](https://img.shields.io/badge/📖_Documentation-View_full_docs-0bb3a0?style=for-the-badge)](https://ensecnet.github.io/netbox-lxc/)
+[![Docs](https://img.shields.io/badge/📖_Documentation-View_full_docs-0bb3a0?style=for-the-badge)](https://ensecnet.github.io/NETBOX/index.html)
 [![License](https://img.shields.io/badge/License-Apache_2.0-131c2b?style=for-the-badge)](LICENSE)
 [![Platform](https://img.shields.io/badge/Platform-Proxmox_VE_·_LXC-131c2b?style=for-the-badge)](https://www.proxmox.com/)
 
@@ -14,7 +14,7 @@ Interactive install wizard · appliance-style status console · one-command boot
 
 ---
 
-> ### 📖 [**Read the full documentation →**](https://ensecnet.github.io/netbox-lxc/)
+> ### 📖 [**Read the full documentation →**](https://ensecnet.github.io/NETBOX/index.html)
 >
 > The complete guide — deployment walk-through, appliance console reference, and
 > update strategy — is published as a documentation site with sidebar navigation.
@@ -40,7 +40,7 @@ is installed on login. The run ends with a clear `DEPLOYMENT SUCCESSFUL` banner.
 On a Proxmox VE node, as root:
 
 ```bash
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/ensecnet/netbox-lxc/main/scripts/netbox-lxc-deploy.sh)"
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/ensecnet/NETBOX/main/scripts/netbox-lxc-deploy.sh)"
 ```
 
 The node downloads the script, the wizard asks for configuration (VMID, hostname,
@@ -48,7 +48,7 @@ credentials, storage, network, versions), and the deploy runs to `SUCCESSFUL`.
 
 > Prefer to read before you run?
 > ```bash
-> git clone https://github.com/ensecnet/netbox-lxc.git
+> git clone https://github.com/ensecnet/NETBOX.git
 > less netbox-lxc/scripts/netbox-lxc-deploy.sh   # read it
 > bash netbox-lxc/scripts/netbox-lxc-deploy.sh   # run it
 > ```
@@ -69,7 +69,7 @@ credentials, storage, network, versions), and the deploy runs to `SUCCESSFUL`.
 Enter the container with `pct enter 310` and an appliance console launches
 automatically — live service health plus a management menu, no commands to
 remember. Full walk-through with every screen is in the
-**[documentation](https://ensecnet.github.io/netbox-lxc/)**.
+**[documentation](https://ensecnet.github.io/NETBOX/)**.
 
 ## Repository layout
 
@@ -89,10 +89,10 @@ The docs site is served from the `docs/` folder via GitHub Pages:
 
 | Page | What's in it |
 |------|--------------|
-| [Overview](https://ensecnet.github.io/netbox-lxc/) | What it is, one-command start |
-| [Deployment walk-through](https://ensecnet.github.io/netbox-lxc/pages/deploy.html) | Step by step from one line to `SUCCESSFUL` |
-| [Appliance console](https://ensecnet.github.io/netbox-lxc/pages/console.html) | The status screen and menu |
-| [Updates & versions](https://ensecnet.github.io/netbox-lxc/pages/updates.html) | Pinning and the auto-update timer |
+| [Overview](https://ensecnet.github.io/NETBOX/) | What it is, one-command start |
+| [Deployment walk-through](https://ensecnet.github.io/NETBOX/pages/deploy.html) | Step by step from one line to `SUCCESSFUL` |
+| [Appliance console](https://ensecnet.github.io/NETBOX/pages/console.html) | The status screen and menu |
+| [Updates & versions](https://ensecnet.github.io/NETBOX/pages/updates.html) | Pinning and the auto-update timer |
 
 ## Security note
 

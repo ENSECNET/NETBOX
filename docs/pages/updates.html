@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="sk">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Updates & versions — NetBox LXC Docs</title>
+<title>Updates — NetBox LXC Docs</title>
 <link rel="stylesheet" href="../assets/style.css">
 </head>
 <body data-root="../" data-page="pages/updates.html">
@@ -17,18 +17,27 @@
     <nav class="nav"></nav>
   </aside>
   <div class="content-wrap"><main class="content">
-    <div class="breadcrumb"><a href="../index.html">Docs</a><span>/</span>Reference<span>/</span>Updates &amp; versions</div>
-    <h1>Updates &amp; versions</h1>
-    <p class="lead">Dve vrstvy aktualizácie, držané oddelene — verzie obrazov a pinovanie netbox-docker release.</p>
-    <table><thead><tr><th>Vrstva</th><th>Čo sa mení</th><th>Ako</th></tr></thead><tbody>
-      <tr><td>Obrazy</td><td>NetBox / Postgres / Redis verzie</td><td>Konzola voľba 3, alebo týždenný auto-update timer (ak povolený)</td></tr>
-      <tr><td>Pinovanie</td><td>Ktorý netbox-docker release sleduješ</td><td>Spusti deploy s konkrétnym tagom namiesto <code>release</code></td></tr>
-    </tbody></table>
-    <h2>Auto-update timer</h2>
-    <p>Ak si vo wizarde povolil auto-update, vytvorí sa systemd timer (<code>netbox-update.timer</code>), ktorý raz týždenne spustí <code>docker compose pull &amp;&amp; up -d</code> a prune. Cesta je idempotentná — recreatne len zmenené kontajnery, dáta v named volumes ostávajú netknuté.</p>
-    <div class="warn"><span class="label">Produkcia</span><p>Pre kontrolovaný upgrade pinuj konkrétny tag a auto-update vypni — verziu meň vedome a otestovane, nie automaticky na to, čo práve vyšlo.</p></div>
-    <div class="pager"><a href="console.html"><span class="dir">Predchádzajúce</span>Appliance console</a><a class="next" href="../index.html"><span class="dir">Ďalšie</span>Späť na Overview</a></div>
-    <div class="doc-footer">NetBox LXC · ensecnet · reproducible Proxmox deployment</div>
+    <div class="breadcrumb"><a href="../index.html">Docs</a><span>/</span><span data-i18n="nav.group.ref"></span><span>/</span><span data-i18n="upd.crumb"></span></div>
+    <h1 data-i18n="upd.title"></h1>
+    <p class="lead" data-i18n="upd.lead"></p>
+
+    <table>
+      <thead><tr><th data-i18n="upd.th.layer"></th><th data-i18n="upd.th.what"></th><th data-i18n="upd.th.how"></th></tr></thead>
+      <tbody>
+        <tr><td data-i18n="upd.r1.l"></td><td data-i18n="upd.r1.w"></td><td data-i18n="upd.r1.h"></td></tr>
+        <tr><td data-i18n="upd.r2.l"></td><td data-i18n="upd.r2.w"></td><td data-i18n="upd.r2.h"></td></tr>
+      </tbody>
+    </table>
+
+    <h2 data-i18n="upd.timer"></h2>
+    <p data-i18n="upd.timer.body"></p>
+    <div class="warn"><span class="label" data-i18n="upd.warn.label"></span><p data-i18n="upd.warn.body"></p></div>
+
+    <div class="pager">
+      <a href="console.html"><span class="dir" data-i18n="pager.prev"></span><span data-i18n="nav.console"></span></a>
+      <a class="next" href="../index.html"><span class="dir" data-i18n="pager.next"></span><span data-i18n="nav.overview"></span></a>
+    </div>
+    <div class="doc-footer" data-i18n="footer"></div>
   </main></div>
 </div>
 <script src="../assets/nav.js"></script>

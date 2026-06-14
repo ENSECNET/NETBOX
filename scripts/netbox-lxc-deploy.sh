@@ -8,10 +8,10 @@
 #  health, installs a systemd unit + appliance-style login console.
 #
 #  One-line bootstrap (run on a Proxmox VE node, as root):
-#    bash -c "$(curl -fsSL https://raw.githubusercontent.com/ensecnet/netbox-lxc/main/scripts/netbox-lxc-deploy.sh)"
+#    bash -c "$(curl -fsSL https://raw.githubusercontent.com/ensecnet/NETBOX/main/scripts/netbox-lxc-deploy.sh)"
 #
 #  Or clone and run:
-#    git clone https://github.com/ensecnet/netbox-lxc.git
+#    git clone https://github.com/ensecnet/NETBOX.git
 #    bash netbox-lxc/scripts/netbox-lxc-deploy.sh
 # ============================================================================
 set -euo pipefail

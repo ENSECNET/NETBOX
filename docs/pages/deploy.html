@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="sk">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Deployment walk-through — NetBox LXC Docs</title>
+<title>Deployment — NetBox LXC Docs</title>
 <link rel="stylesheet" href="../assets/style.css">
 </head>
 <body data-root="../" data-page="pages/deploy.html">
@@ -17,16 +17,19 @@
     <nav class="nav"></nav>
   </aside>
   <div class="content-wrap"><main class="content">
-    <div class="breadcrumb"><a href="../index.html">Docs</a><span>/</span>Getting Started<span>/</span>Deployment walk-through</div>
-    <h1>Deployment walk-through</h1>
-    <p class="lead">Celý deploy krok za krokom s reálnym výstupom. Sieťové hodnoty sú RFC 5737 placeholdery (192.0.2.0/24).</p>
-    <h2>1 · Jeden príkaz na Proxmox node-e</h2>
-    <p>V shelli node-u (web UI → node → Shell, alebo SSH):</p>
-    <pre><code>bash -c "$(curl -fsSL https://raw.githubusercontent.com/ensecnet/netbox-lxc/main/scripts/netbox-lxc-deploy.sh)"</code></pre>
-    <div class="note"><span class="label">Radšej najprv prečítať?</span><p><code>git clone</code> → <code>less</code> skript → spustiť. Skript je krátky a čitateľný.</p></div>
-    <h2>2 · Wizard</h2>
-    <p>Pýta sa na všetko vopred, defaulty v zátvorkách. Sekvencia: VMID, hostname, root heslo, NetBox admin (user/email/heslo), výpis storage + voľba, disk/RAM/CPU, HTTP port, potom sieť (bridge/IP/GW/DNS/VLAN) a verzie (netbox-docker tag, auto-update). Na konci súhrn a jedno potvrdenie.</p>
-    <h2>3 · Poloautomatický deploy</h2>
+    <div class="breadcrumb"><a href="../index.html">Docs</a><span>/</span><span data-i18n="nav.group.start"></span><span>/</span><span data-i18n="dep.crumb"></span></div>
+    <h1 data-i18n="dep.title"></h1>
+    <p class="lead" data-i18n="dep.lead"></p>
+
+    <h2 data-i18n="dep.s1"></h2>
+    <p data-i18n="dep.s1.body"></p>
+    <pre><code>bash -c "$(curl -fsSL https://raw.githubusercontent.com/ensecnet/NETBOX/main/scripts/netbox-lxc-deploy.sh)"</code></pre>
+    <div class="note"><span class="label" data-i18n="dep.s1.note.label"></span><p data-i18n="dep.s1.note.body"></p></div>
+
+    <h2 data-i18n="dep.s2"></h2>
+    <p data-i18n="dep.s2.body"></p>
+
+    <h2 data-i18n="dep.s3"></h2>
     <pre><code>── Provisioning LXC 310 ──
 [OK] LXC 310 created.
 [OK] LXC started.
@@ -37,7 +40,8 @@
 ── Waiting for NetBox to become ready ──
 ......
 [OK] NetBox is up (HTTP 200).</code></pre>
-    <h2>4 · SUCCESSFUL</h2>
+
+    <h2 data-i18n="dep.s4"></h2>
     <pre><code>════════════════════════════════════════════════
   DEPLOYMENT SUCCESSFUL
 ════════════════════════════════════════════════
@@ -45,8 +49,12 @@
   Login    : admin / (the password you set)
   Console  : pct enter 310  (auto-launches menu)
 ════════════════════════════════════════════════</code></pre>
-    <div class="pager"><a href="../index.html"><span class="dir">Predchádzajúce</span>Overview</a><a class="next" href="console.html"><span class="dir">Ďalšie</span>Appliance console</a></div>
-    <div class="doc-footer">NetBox LXC · ensecnet · reproducible Proxmox deployment</div>
+
+    <div class="pager">
+      <a href="../index.html"><span class="dir" data-i18n="pager.prev"></span><span data-i18n="nav.overview"></span></a>
+      <a class="next" href="console.html"><span class="dir" data-i18n="pager.next"></span><span data-i18n="nav.console"></span></a>
+    </div>
+    <div class="doc-footer" data-i18n="footer"></div>
   </main></div>
 </div>
 <script src="../assets/nav.js"></script>

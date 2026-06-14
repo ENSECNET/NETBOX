@@ -32,10 +32,15 @@ status_screen() {
   port="${port:-8000}"
 
   echo -e "${BOLD}${CYAN}"
-  echo "  ╔══════════════════════════════════════════════════╗"
-  echo "  ║   NetBox Appliance  ·  ensecnet                  ║"
-  echo "  ╚══════════════════════════════════════════════════╝"
-  echo -e "${NC}"
+  cat << 'EOF'
+   _   _      _   ____
+  | \ | | ___| |_| __ )  _____  __
+  |  \| |/ _ \ __|  _ \ / _ \ \/ /
+  | |\  |  __/ |_| |_) | (_) >  <
+  |_| \_|\___|\__|____/ \___/_/\_\
+EOF
+  echo -e "${NC}${DIM}  appliance console · ensecnet${NC}"
+  echo
   printf "  %-14s %s\n" "Host:"    "$(hostname)"
   printf "  %-14s %s\n" "Address:" "http://${ip}:${port}"
   printf "  %-14s %s\n" "Uptime:"  "$(uptime -p 2>/dev/null | sed 's/^up //')"
