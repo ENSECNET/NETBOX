@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Appliance console — NetBox LXC Docs</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body data-root="../" data-page="pages/console.html">
+<button class="menu-toggle" aria-label="Menu">☰</button>
+<div class="layout">
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="brand-mark">NB</div>
+      <div class="brand-text"><div class="name">NetBox LXC</div><div class="sub">ensecnet · Proxmox</div></div>
+    </div>
+    <nav class="nav"></nav>
+  </aside>
+  <div class="content-wrap"><main class="content">
+    <div class="breadcrumb"><a href="../index.html">Docs</a><span>/</span>Reference<span>/</span>Appliance console</div>
+    <h1>Appliance console</h1>
+    <p class="lead">Status obrazovka a správcovské menu, ktoré sa automaticky spustí pri prihlásení do kontajnera (<code>pct enter 310</code>). Štýl pfSense / OPNsense / Home Assistant OS.</p>
+    <h2>Ako vyzerá</h2>
+    <pre><code>  ╔══════════════════════════════════════════════════╗
+  ║   NetBox Appliance  ·  ensecnet                  ║
+  ╚══════════════════════════════════════════════════╝
+
+  Host:          netbox
+  Address:       http://192.0.2.10:8000
+  Uptime:        12 minutes
+  ────────────────────────────────────────────────
+  SERVICES
+  NetBox             ● running
+  Worker             ● running
+  PostgreSQL         ● running
+  Redis              ● starting
+  ────────────────────────────────────────────────
+  MENU
+   1) Service status (detailed)
+   2) Restart NetBox stack
+   3) Update NetBox (pull current images)
+   4) View logs (follow)
+   5) Reset admin password
+   6) Shell (root bash)
+   7) Reboot appliance
+   0) Logout</code></pre>
+    <h2>Stavové body</h2>
+    <p>Body pri službách sú farebné a živé: zelený <code>● running</code>, žltý <code>● starting</code>, červený <code>● stopped</code>. Stav sa číta cez <code>docker ps</code> pri každom zobrazení.</p>
+    <div class="note"><span class="label">Inštalácia</span><p>Konzolu nainštaluje deployer do <code>/usr/local/sbin/netbox-console.sh</code> a cez <code>/etc/profile.d/</code> ju spustí pri interaktívnom logine. Žiadne príkazy na zapamätanie.</p></div>
+    <div class="pager"><a href="deploy.html"><span class="dir">Predchádzajúce</span>Deployment walk-through</a><a class="next" href="updates.html"><span class="dir">Ďalšie</span>Updates &amp; versions</a></div>
+    <div class="doc-footer">NetBox LXC · ensecnet · reproducible Proxmox deployment</div>
+  </main></div>
+</div>
+<script src="../assets/nav.js"></script>
+</body>
+</html>

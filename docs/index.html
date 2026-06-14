@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NetBox LXC — NetBox LXC Docs</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body data-root="" data-page="index.html">
+<button class="menu-toggle" aria-label="Menu">☰</button>
+<div class="layout">
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="brand-mark">NB</div>
+      <div class="brand-text"><div class="name">NetBox LXC</div><div class="sub">ensecnet · Proxmox</div></div>
+    </div>
+    <nav class="nav"></nav>
+  </aside>
+  <div class="content-wrap"><main class="content">
+    <h1>NetBox LXC Deploy</h1>
+    <p class="lead">Lightweight, reprodukovateľné nasadenie NetBoxu (IPAM / Source of Truth) na Proxmox VE — jeden príkaz na node-e, interaktívny wizard, a poloautomatický deploy s aktuálnymi verziami, ktorý končí výpisom SUCCESSFUL.</p>
+    <div class="note"><span class="label">Netreba nič inštalovať na vyskúšanie</span><p>Walk-through prejde celý deploy s presnými príkazmi a reálnym výstupom na obrazovke — dá sa prečítať ako záznam nasadenia.</p></div>
+    <h2>Obsah</h2>
+    <div class="cards">
+      <a class="card" href="pages/deploy.html"><span class="tag">Guide</span><h3>Deployment walk-through</h3><p>Krok za krokom od jedného riadku po SUCCESSFUL.</p></a>
+      <a class="card" href="pages/console.html"><span class="tag">Reference</span><h3>Appliance console</h3><p>Status obrazovka a menu, čo sa spustí pri logine.</p></a>
+      <a class="card" href="pages/updates.html"><span class="tag">Reference</span><h3>Updates &amp; versions</h3><p>Pinovanie verzií a auto-update timer.</p></a>
+    </div>
+    <h2>Jeden príkaz</h2>
+    <pre><code>bash -c "$(curl -fsSL https://raw.githubusercontent.com/ensecnet/netbox-lxc/main/scripts/netbox-lxc-deploy.sh)"</code></pre>
+    <p>Node stiahne skript, wizard sa spýta na konfiguráciu, a zvyšok prebehne poloautomaticky.</p>
+    <div class="doc-footer">NetBox LXC · ensecnet · reproducible Proxmox deployment</div>
+  </main></div>
+</div>
+<script src="assets/nav.js"></script>
+</body>
+</html>

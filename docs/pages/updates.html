@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Updates & versions — NetBox LXC Docs</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body data-root="../" data-page="pages/updates.html">
+<button class="menu-toggle" aria-label="Menu">☰</button>
+<div class="layout">
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="brand-mark">NB</div>
+      <div class="brand-text"><div class="name">NetBox LXC</div><div class="sub">ensecnet · Proxmox</div></div>
+    </div>
+    <nav class="nav"></nav>
+  </aside>
+  <div class="content-wrap"><main class="content">
+    <div class="breadcrumb"><a href="../index.html">Docs</a><span>/</span>Reference<span>/</span>Updates &amp; versions</div>
+    <h1>Updates &amp; versions</h1>
+    <p class="lead">Dve vrstvy aktualizácie, držané oddelene — verzie obrazov a pinovanie netbox-docker release.</p>
+    <table><thead><tr><th>Vrstva</th><th>Čo sa mení</th><th>Ako</th></tr></thead><tbody>
+      <tr><td>Obrazy</td><td>NetBox / Postgres / Redis verzie</td><td>Konzola voľba 3, alebo týždenný auto-update timer (ak povolený)</td></tr>
+      <tr><td>Pinovanie</td><td>Ktorý netbox-docker release sleduješ</td><td>Spusti deploy s konkrétnym tagom namiesto <code>release</code></td></tr>
+    </tbody></table>
+    <h2>Auto-update timer</h2>
+    <p>Ak si vo wizarde povolil auto-update, vytvorí sa systemd timer (<code>netbox-update.timer</code>), ktorý raz týždenne spustí <code>docker compose pull &amp;&amp; up -d</code> a prune. Cesta je idempotentná — recreatne len zmenené kontajnery, dáta v named volumes ostávajú netknuté.</p>
+    <div class="warn"><span class="label">Produkcia</span><p>Pre kontrolovaný upgrade pinuj konkrétny tag a auto-update vypni — verziu meň vedome a otestovane, nie automaticky na to, čo práve vyšlo.</p></div>
+    <div class="pager"><a href="console.html"><span class="dir">Predchádzajúce</span>Appliance console</a><a class="next" href="../index.html"><span class="dir">Ďalšie</span>Späť na Overview</a></div>
+    <div class="doc-footer">NetBox LXC · ensecnet · reproducible Proxmox deployment</div>
+  </main></div>
+</div>
+<script src="../assets/nav.js"></script>
+</body>
+</html>
